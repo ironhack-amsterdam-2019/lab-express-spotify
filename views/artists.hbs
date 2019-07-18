@@ -1,0 +1,17 @@
+<h1 class="is-centered">Artists</h1>
+<p class="is-centered">found under "{{artist}}"</p>
+<p class="is-centered">Click on an album to see all tracks</p>
+<div class="flex-list">
+  {{#artists}}
+  {{#each items}}
+  <div class="item">
+    <img src="{{#if images.[0].url}}{{images.[0].url}}{{else}}No img available{{/if}}" alt="No image found :(">
+    <p>{{name}}</p>
+    <a href="/artist/{{id}}"></a>
+  </div>
+  {{/each}}
+  {{/artists}}
+</div>
+{{#if artists.next}}
+<a class="next" href="?artist={{artist}}&offset={{nextoffset}}">Next page</a>
+{{/if}}

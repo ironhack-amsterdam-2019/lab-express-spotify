@@ -1,0 +1,23 @@
+<div class="track-list">
+  <div class="labels track">
+    <p>Name</p>
+    <p>Preview</p>
+  </div>
+  {{#data}}
+  {{#each items}}
+  <div class="track">
+    <p>{{name}}</p>
+    {{#if preview_url}}
+    <audio controls name="media">
+      <source src="{{preview_url}}" type="audio/mpeg">
+    </audio>
+    {{else}}
+    <p>No preview available</p>
+    {{/if}}
+  </div>
+  {{/each}}
+  {{/data}}
+</div>
+{{#if artists.next}}
+<a class="next" href="?offset={{nextoffset}}">Next page</a>
+{{/if}}

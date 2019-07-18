@@ -1,0 +1,89 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.flex-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.item:hover {
+  border: solid blue 2px;
+  margin: 8px;
+}
+
+.item img {
+  max-width: 100%;
+  margin: auto;
+}
+
+.item a {
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.track-list {
+  padding: 15px 10%;
+}
+
+.track-list .track.labels {
+  background-color: lightblue;
+}
+
+.track {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5px 0px;
+  padding: 5px;
+}
+
+.track:nth-of-type(even) {
+  background-color: lightgray;
+}
+
+.track:nth-of-type(odd) {
+  background-color: gray;
+}
+
+.is-centered {
+  text-align: center;
+}
+
+a.next {
+  position: absolute;
+  left: 10%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .track {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

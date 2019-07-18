@@ -1,0 +1,16 @@
+<h1 class="is-centered">Albums</h1>
+<p class="is-centered">Click on an album to see all tracks</p>
+<div class="flex-list">
+  {{#data}}
+  {{#each items}}
+  <div class="item">
+    <img src="{{images.[0].url}}" alt="No image found :(">
+    <p>{{name}}</p>
+    <a href="/album/{{id}}"></a>
+  </div>
+  {{/each}}
+  {{/data}}
+</div>
+{{#if data.next}}
+<a class="next" href="?offset={{nextoffset}}">Next page</a>
+{{/if}}
