@@ -18,4 +18,6 @@ app.use('/', require('./routes/albums'));
 
 app.use('/', require('./routes/album'));
 
-app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
+let port = process.env.PORT ? process.env.PORT : 3000;
+
+app.listen(port, () => console.log("My Spotify project running on port " + port + " 🎧 🥁 🎸 🔊"));
