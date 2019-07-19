@@ -1,7 +1,44 @@
 html,
 body {
+  background-image: url(/crossword.png);
   padding: 0;
   margin: 0;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-box {
+  border: solid orangered 2px;
+  border-radius: 5px;
+  background-color: rgb(128, 128, 128, 0.8);
+  position: relative;
+  margin: auto;
+  width: 500px;
+  max-width: 100%;
+  padding: 15px;
+}
+
+.search-box form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.search-box form input#artist {
+  width: 100%;
+  margin: 0 20px;
 }
 
 .flex-list {
@@ -29,9 +66,18 @@ body {
   margin: 8px;
 }
 
-.item img {
-  max-width: 100%;
+.image-box {
+  position: relative;
+  width: 400px;
+  height: 450px;
   margin: auto;
+}
+
+.item img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto auto;
 }
 
 .item a {
